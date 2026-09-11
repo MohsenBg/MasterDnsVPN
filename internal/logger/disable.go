@@ -1,7 +1,9 @@
 package logger
 
-import "io"
+import "sync/atomic"
 
-func (l *Logger) Disable() {
-	l.consoleWriter = io.Discard
+var discard atomic.Bool
+
+func DiscardLogs() {
+	discard.Store(true)
 }

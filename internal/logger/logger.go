@@ -80,7 +80,7 @@ func NewWithFile(name, rawLevel, filePath string) *Logger {
 	var fileWriter *os.File
 
 	if filePath != "" {
-		f, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+		f, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o644)
 		if err == nil {
 			fileWriter = f
 		}
@@ -138,7 +138,7 @@ func (l *Logger) logf(level int, format string, args ...any) {
 		}
 	}
 
-	if l.consoleWriter != nil {
+	if l.consoleWriter != nil && !discard.Load() {
 		appName := l.appNameText
 		levelText := plainLevelTexts[level]
 		finalMsg := plainMsg
