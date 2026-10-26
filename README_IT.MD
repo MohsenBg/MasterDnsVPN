@@ -288,6 +288,8 @@ Automaticamente:
 * linux/arm64/v8
 * linux/mips64le
 
+L’immagine include il server e il modello di configurazione per tutte e cinque le architetture. Il primo avvio non richiede download; la configurazione e le chiavi esistenti in `/data` vengono riutilizzate. L’ambiente minimo non include una shell o un gestore di pacchetti.
+
 ---
 
 #### Sezione 2.2.3: 🚀 Avvio Rapido

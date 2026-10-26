@@ -288,6 +288,8 @@ Automáticamente:
 * linux/arm64/v8
 * linux/mips64le
 
+La imagen incluye el servidor y su plantilla de configuración para las cinco arquitecturas. El primer inicio no necesita descargar archivos; se reutilizan la configuración y las claves existentes en `/data`. El entorno mínimo no incluye shell ni gestor de paquetes.
+
 ---
 
 #### Sección 2.2.3: 🚀 Inicio rápido

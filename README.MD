@@ -287,6 +287,8 @@ It automatically:
 * linux/arm64/v8
 * linux/mips64le
 
+The image bundles the server and its configuration template for all five architectures. First startup works without downloading files; existing configuration and keys in `/data` are reused. The minimal runtime has no shell or package manager.
+
 ---
 
 #### Section 2.2.3: 🚀 Quick Start
